@@ -1,12 +1,12 @@
 package com.movietracker.metadata.metadata;
 
-//import configuration.DatasourceConfig;
 import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.context.annotation.ComponentScan;
+import org.springframework.boot.autoconfigure.orm.jpa.HibernateJpaAutoConfiguration;
 
-@SpringBootApplication//(exclude={DatasourceConfig.class})
-//@ComponentScan({"configuration"})
+@SpringBootApplication
+@EnableAutoConfiguration(exclude = HibernateJpaAutoConfiguration.class)
 public class MetadataApplication {
 
 	public static void main(String[] args) {
